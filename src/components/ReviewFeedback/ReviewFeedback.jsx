@@ -5,6 +5,8 @@ function ReviewFeedback() {
 
     const feedback = useSelector(store => store.feedbackReducer);
 
+    // TODO POST to DB
+    // TODO Submission success page w/button to take new survey and clears data in store
     const handleReviewSubmit = (event) => {
         event.preventDefault();
 

@@ -34,7 +34,6 @@ function CommentsForm() {
             <h1>Any comments you want to leave?</h1>
             <form onSubmit={handleCommentsSubmit}>
                 <textarea
-                    required
                     rows={10}
                     cols={50}
                     onChange={event => setComments(event.target.value)}
