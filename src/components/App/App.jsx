@@ -4,6 +4,7 @@ import './App.css';
 import Header from '../Header/Header';
 import FeelingForm from '../FeelingForm/FeelingForm';
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
+import SupportedForm from '../SupportedForm/SupportedForm';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <FeelingForm />
       <UnderstandingForm />
+      <SupportedForm />
     </div>
   );
 }
