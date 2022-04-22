@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function CommentsForm() {
 
     const [comments, setComments] = useState('');
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const feedbackObject = {
         comments: comments,
@@ -20,6 +22,11 @@ function CommentsForm() {
         const action = {type: 'ADD_COMMENTS', payload: feedbackObject};
         dispatch(action);
         setComments('');
+        nextReview();
+    }
+
+    const nextReview = () => {
+        history.push('/review');
     }
 
     return(
