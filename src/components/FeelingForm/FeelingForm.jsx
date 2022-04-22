@@ -1,12 +1,23 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 function FeelingForm() {
 
     const [feeling, setFeeling] = useState('');
+    const dispatch = useDispatch();
 
-    const handleFeelingSubmit = () => {
+    const feedbackObject = {
+        feeling: feeling,
+    }
+
+    const handleFeelingSubmit = (event) => {
         console.log('in handleFeelingSubmit');
-        console.log(feeling);
+        console.log('feeling: ', feeling);
+        event.preventDefault();
+        console.log('feedbackObject: ', feedbackObject);
+
+        const action = {type: 'ADD_FEELING', payload: feedbackObject}
+        dispatch(action);
     }
 
     return(
@@ -20,6 +31,7 @@ function FeelingForm() {
                     style={{width: 50}}
                     placeholder="1-5"
                     onChange={event => setFeeling(event.target.value)}
+                    value={feeling}
                 />
                 <input 
                     type="submit" 

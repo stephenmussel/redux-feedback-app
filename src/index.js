@@ -11,8 +11,15 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
+const feedbackObject = {
+    feelings: '',
+    understanding: '',
+    support: '',
+    comments: '',
+}
+
 // TODO add more reducers?
-const feedbackReducer = (state = [], action) => {
+const feedbackReducer = (state = feedbackObject, action) => {
     console.log('in feedbackReducer');
     return state;
 }
