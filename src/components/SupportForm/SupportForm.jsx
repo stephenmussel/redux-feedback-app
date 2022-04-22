@@ -21,6 +21,7 @@ function SupportForm() {
         dispatch(action);
         setSupport('');
     }
+    
 
     return(
         <>

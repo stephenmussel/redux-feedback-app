@@ -26,7 +26,7 @@ function UnderstandingForm() {
     }
 
     const nextSupported = () => {
-        history.push('/supported');
+        history.push('/support');
     }
 
     return(
