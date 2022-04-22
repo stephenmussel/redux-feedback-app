@@ -1,8 +1,15 @@
 import { useSelector } from 'react-redux';
+import axios from 'axios';
 
 function ReviewFeedback() {
 
     const feedback = useSelector(store => store.feedbackReducer);
+
+    const handleReviewSubmit = (event) => {
+        event.preventDefault();
+
+        console.log('in handleReviewSubmit');
+    }
 
     return(
         <>
@@ -13,7 +20,7 @@ function ReviewFeedback() {
             <p>Understanding: {feedback.understanding}</p>
             <p>Support: {feedback.support}</p>
             <p>Comments: {feedback.comments}</p>
-            <button>Submit</button>
+            <button onClick={handleReviewSubmit}>Submit</button>
         </>
     )
 }
