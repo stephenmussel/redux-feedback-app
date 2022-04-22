@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import FeelingForm from '../FeelingForm/FeelingForm';
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
 import SupportedForm from '../SupportedForm/SupportedForm';
+import CommentsForm from '../CommentsForm/CommentsForm';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <FeelingForm />
       <UnderstandingForm />
       <SupportedForm />
+      <CommentsForm />
     </div>
   );
 }
