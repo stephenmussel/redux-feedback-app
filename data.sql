@@ -1,7 +1,7 @@
--- Database should be prime_feedback
-CREATE DATABASE "prime_feedback";
+-- Database should be prime_feedback_practice
+CREATE DATABASE "prime_feedback_practice";
 
--- Switch to "prime_feedback" before making:
+-- Switch to "prime_feedback_practice" before making:
 -- Table to store the feedback
 CREATE TABLE "feedback" (
   "id" serial primary key,
