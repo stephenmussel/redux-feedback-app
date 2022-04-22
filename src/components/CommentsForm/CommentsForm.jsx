@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 function CommentsForm() {
 
     const [comments, setComments] = useState('');
+    const dispatch = useDispatch();
 
     const feedbackObject = {
         comments: comments,
@@ -14,6 +16,10 @@ function CommentsForm() {
         console.log('in handleCommentsSubmit');
         console.log('comments: ', comments);
         console.log('feedbackObject: ', feedbackObject);
+
+        const action = {type: 'ADD_COMMENTS', payload: feedbackObject};
+        dispatch(action);
+        setComments('');
     }
 
     return(
