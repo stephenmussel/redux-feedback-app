@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function SupportForm() {
 
     const [support, setSupport] = useState('');
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const feedbackObject = {
         support: support,
@@ -20,6 +22,11 @@ function SupportForm() {
         const action = {type: 'ADD_SUPPORT', payload: feedbackObject};
         dispatch(action);
         setSupport('');
+        nextComments();
+    }
+
+    const nextComments = () => {
+        history.push('/comments');
     }
     
 
