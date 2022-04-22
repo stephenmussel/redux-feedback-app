@@ -33,6 +33,7 @@ function FeelingForm() {
             <h1>How are you feeling?</h1>
             <form onSubmit={handleFeelingSubmit}>
                 <input
+                    required
                     type="number"
                     min="1"
                     max="5"

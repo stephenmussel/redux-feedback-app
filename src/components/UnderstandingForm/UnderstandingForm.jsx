@@ -34,6 +34,7 @@ function UnderstandingForm() {
             <h1>How well are you understanding the content?</h1>
             <form onSubmit={handleUnderstandSubmit}>
                 <input
+                    required
                     type="number"
                     min="1"
                     max="5"

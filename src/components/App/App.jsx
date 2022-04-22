@@ -5,7 +5,7 @@ import './App.css';
 import Header from '../Header/Header';
 import FeelingForm from '../FeelingForm/FeelingForm';
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
-import SupportedForm from '../SupportedForm/SupportedForm';
+import SupportForm from '../SupportForm/SupportForm';
 import CommentsForm from '../CommentsForm/CommentsForm';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
 import ThankYou from '../ThankYou/ThankYou';
@@ -20,7 +20,7 @@ function App() {
       <Router>
         <Route exact path="/" component={FeelingForm} />
         <Route exact path="/understanding" component={UnderstandingForm}/>
-        <Route exact path="/supported" component={SupportedForm}/>
+        <Route exact path="/support" component={SupportForm}/>
         <Route exact path="/comments" component={CommentsForm}/>
         <Route exact path="/review" component={ReviewFeedback}/>
         <Route exact path="/thankyou" component={ThankYou}/>
