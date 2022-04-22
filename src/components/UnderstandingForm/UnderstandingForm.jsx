@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 function UnderstandingForm() {
 
     const [understanding, setUnderstanding] = useState('');
+    const dispatch = useDispatch();
 
     const feedbackObject = {
         understanding: understanding,
@@ -14,6 +16,10 @@ function UnderstandingForm() {
         console.log('in handleUnderstandSubmit');
         console.log('understanding: ', understanding);
         console.log('feedbackObject: ', feedbackObject);
+
+        const action = {type: 'ADD_UNDERSTANDING', payload: feedbackObject}
+        dispatch(action);
+        setUnderstanding('');
         
     }
 
