@@ -7,7 +7,13 @@ function ReviewFeedback() {
     return(
         <>
             <h1>Let's review your feedback: </h1>
-            <p>{JSON.stringify(feedback)}</p>
+            {/* <p>{JSON.stringify(feedback)}</p> */}
+
+            <p>Feeling: {feedback.feeling}</p>
+            <p>Understanding: {feedback.understanding}</p>
+            <p>Support: {feedback.support}</p>
+            <p>Comments: {feedback.comments}</p>
+            <button>Submit</button>
         </>
     )
 }
