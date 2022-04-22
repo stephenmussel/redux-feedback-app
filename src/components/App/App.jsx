@@ -6,6 +6,7 @@ import FeelingForm from '../FeelingForm/FeelingForm';
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
 import SupportedForm from '../SupportedForm/SupportedForm';
 import CommentsForm from '../CommentsForm/CommentsForm';
+import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <UnderstandingForm />
       <SupportedForm />
       <CommentsForm />
+      <ReviewFeedback />
     </div>
   );
 }
