@@ -17,6 +17,9 @@ function SupportForm() {
         console.log('support: ', support);
         console.log('feedbackObject: ', feedbackObject);
 
+        const action = {type: 'ADD_SUPPORT', payload: feedbackObject};
+        dispatch(action);
+        setSupport('');
     }
 
     return(
