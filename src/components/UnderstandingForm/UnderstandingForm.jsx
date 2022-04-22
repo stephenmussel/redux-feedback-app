@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function UnderstandingForm() {
 
     const [understanding, setUnderstanding] = useState('');
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const feedbackObject = {
         understanding: understanding,
@@ -20,7 +22,11 @@ function UnderstandingForm() {
         const action = {type: 'ADD_UNDERSTANDING', payload: feedbackObject}
         dispatch(action);
         setUnderstanding('');
-        
+        nextSupported();   
+    }
+
+    const nextSupported = () => {
+        history.push('/supported');
     }
 
     return(
