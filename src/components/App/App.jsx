@@ -7,6 +7,7 @@ import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
 import SupportedForm from '../SupportedForm/SupportedForm';
 import CommentsForm from '../CommentsForm/CommentsForm';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
+import ThankYou from '../ThankYou/ThankYou';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <SupportedForm />
       <CommentsForm />
       <ReviewFeedback />
+      <ThankYou />
     </div>
   );
 }
