@@ -19,11 +19,14 @@ const feedbackObject = {
 }
 
 // TODO add more reducers?
+// TODO switch statement?
 const feedbackReducer = (state = feedbackObject, action) => {
     console.log('in feedbackReducer', action);
 
     if(action.type === 'ADD_FEELING') {
         return {...state, feeling: action.payload.feeling}
+    } else if(action.type === 'ADD_UNDERSTANDING') {
+        return {...state, understanding: action.payload.understanding}
     }
     return state;
 }
