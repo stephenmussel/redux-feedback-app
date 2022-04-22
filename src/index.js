@@ -12,7 +12,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
 const feedbackObject = {
-    feelings: '',
+    feeling: '',
     understanding: '',
     support: '',
     comments: '',
@@ -20,7 +20,11 @@ const feedbackObject = {
 
 // TODO add more reducers?
 const feedbackReducer = (state = feedbackObject, action) => {
-    console.log('in feedbackReducer');
+    console.log('in feedbackReducer', action);
+
+    if(action.type === 'ADD_FEELING') {
+        return {...state, feeling: action.payload.feeling}
+    }
     return state;
 }
 
