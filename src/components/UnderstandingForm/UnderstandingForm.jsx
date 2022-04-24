@@ -29,6 +29,13 @@ function UnderstandingForm() {
         history.push('/support');
     }
 
+    const goBack = (event) => {
+        event.preventDefault();
+        const action = {type: 'ADD_UNDERSTANDING', payload: feedbackObject}
+        dispatch(action);
+        history.push('/');
+    }
+
     return(
         <>
             <h1>How well are you understanding the content?</h1>
@@ -48,6 +55,7 @@ function UnderstandingForm() {
                     value="Next"
                     style={{margin: 5}}
                 />
+                <button onClick={goBack}>Back</button>
             </form>
         </>
     )

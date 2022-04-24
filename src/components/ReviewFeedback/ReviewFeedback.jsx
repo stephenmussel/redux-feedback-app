@@ -7,8 +7,6 @@ function ReviewFeedback() {
     const feedback = useSelector(store => store.feedbackReducer);
     const history = useHistory();
 
-    // TODO POST to DB: add client POST request then add server side route and router
-    // TODO Submission success page w/button to take new survey and clears data in store
     const handleReviewSubmit = (event) => {
         event.preventDefault();
 
@@ -23,6 +21,12 @@ function ReviewFeedback() {
             console.log('feedback: ', feedback);
             history.push('/thankyou');
         })
+    }
+
+    const handleEdit = (event) => {
+        event.preventDefault();
+        console.log('in handleEdit');
+
     }
 
     return(

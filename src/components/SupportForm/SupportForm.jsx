@@ -28,6 +28,10 @@ function SupportForm() {
     const nextComments = () => {
         history.push('/comments');
     }
+
+    const backPage = () => {
+        history.push('/understanding');
+    }
     
 
     return(
@@ -49,6 +53,7 @@ function SupportForm() {
                     value="Next"
                     style={{margin: 5}}
                 />
+                <button onClick={backPage}>Back</button>
             </form>
         </>
     )
