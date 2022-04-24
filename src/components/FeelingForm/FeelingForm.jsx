@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function FeelingForm() {
 
@@ -53,11 +54,12 @@ function FeelingForm() {
                     onChange={event => setFeeling(event.target.value)}
                     value={feeling}
                 />
-                <input 
+                {/* <input 
                     type="submit" 
                     value="Next" 
                     style={{margin: 5}}
-                />
+                /> */}
+                <Button sx={{ml: 1, mr: 1}} variant="contained" type="submit">Next</Button>
             </form>
         </>
     )

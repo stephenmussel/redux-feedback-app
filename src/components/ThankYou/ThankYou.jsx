@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
+import Button from '@mui/material/Button';
 
 function ThankYou() {
 
@@ -24,7 +24,7 @@ function ThankYou() {
     return(
         <>
             <h1>Thank you!</h1>
-            <button onClick={handleNewFeedback}>Leave new feedback!</button>
+            <Button variant="contained" onClick={handleNewFeedback}>Leave new feedback!</Button>
         </>        
     )
 }

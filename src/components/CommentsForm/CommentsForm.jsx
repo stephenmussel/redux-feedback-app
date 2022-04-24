@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function CommentsForm() {
 
@@ -55,13 +56,14 @@ function CommentsForm() {
                     cols={50}
                     onChange={event => setComments(event.target.value)}
                     value={comments}
-                 /><br />
-                <input 
+                 /><br /><br />
+                {/* <input 
                     type="submit"
                     value="Next"
                     style={{margin: 5}}
-                />
-                <button onClick={goBack}>Back</button>
+                /> */}
+                <Button sx={{ml: 1, mr: 1}} variant="contained" type="submit">Next</Button>
+                <Button variant="contained" onClick={goBack}>Back</Button>
             </form>
         </>
     )
