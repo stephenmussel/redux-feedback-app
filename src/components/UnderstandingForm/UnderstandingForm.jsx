@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function UnderstandingForm() {
@@ -7,6 +7,16 @@ function UnderstandingForm() {
     const [understanding, setUnderstanding] = useState('');
     const dispatch = useDispatch();
     const history = useHistory();
+    const feedback = useSelector(store => store.feedbackReducer);
+
+    useEffect(() => {
+        console.log('in understanding useEffect');
+        entryCheck();
+    }, []);
+
+    const entryCheck = () => {
+        feedback.understanding && setUnderstanding(feedback.understanding);
+    }
 
     const feedbackObject = {
         understanding: understanding,

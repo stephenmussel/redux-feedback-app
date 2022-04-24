@@ -14,6 +14,7 @@ function FeelingForm() {
         entryCheck();
     }, [])
 
+    // for displaying and editing previous entry. checks to see if there was previous entry and sets the variable to that value
     const entryCheck = () => {
         feedback.feeling && setFeeling(feedback.feeling);
     }
