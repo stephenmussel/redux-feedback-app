@@ -29,11 +29,13 @@ function SupportForm() {
         history.push('/comments');
     }
 
-    const backPage = () => {
+    const goBack = (event) => {
+        event.preventDefault();
+        const action = {type: 'ADD_SUPPORT', payload: feedbackObject};
+        dispatch(action);
         history.push('/understanding');
     }
     
-
     return(
         <>
             <h1>How well are you being supported?</h1>
@@ -53,7 +55,7 @@ function SupportForm() {
                     value="Next"
                     style={{margin: 5}}
                 />
-                <button onClick={backPage}>Back</button>
+                <button onClick={goBack}>Back</button>
             </form>
         </>
     )
