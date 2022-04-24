@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import Paper from '@mui/material/Paper';
 
 function ReviewFeedback() {
 
@@ -31,6 +32,7 @@ function ReviewFeedback() {
 
     return(
         <>
+        <Paper variant="elevation" className="feedback-container" sx={{width: 750}}>
             <h1>Let's review your feedback: </h1>
             {/* <p>{JSON.stringify(feedback)}</p> */}
 
@@ -38,8 +40,11 @@ function ReviewFeedback() {
             <p>Understanding: {feedback.understanding}</p>
             <p>Support: {feedback.support}</p>
             <p>Comments: {feedback.comments}</p>
-            <Button sx={{ml: 1, mr: 1}} variant="contained" onClick={handleReviewSubmit}>Submit</Button>
-            <Button variant="contained" onClick={goBack}>Back</Button>
+            <div>
+                <Button sx={{ml: 1, mr: 1}} variant="contained" onClick={handleReviewSubmit}>Submit</Button>
+                <Button variant="contained" onClick={goBack}>Back</Button>
+            </div>
+        </Paper>
         </>
     )
 }

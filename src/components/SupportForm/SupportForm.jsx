@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import Paper from '@mui/material/Paper';
 
 function SupportForm() {
 
@@ -49,6 +50,7 @@ function SupportForm() {
     
     return(
         <>
+        <Paper variant="elevation" className="feedback-container" sx={{width: 750}}>
             <h1>How well are you being supported?</h1>
             <form onSubmit={handleSupportSubmit}>
                 <input 
@@ -69,6 +71,7 @@ function SupportForm() {
                 <Button sx={{ml:1, mr: 1}} variant="contained" type="submit">Next</Button>
                 <Button variant="contained" onClick={goBack}>Back</Button>
             </form>
+        </Paper>
         </>
     )
 }

@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 
 function FeelingForm() {
 
@@ -42,6 +44,7 @@ function FeelingForm() {
 
     return(
         <>
+        <Paper variant="elevation" className="feedback-container" sx={{width: 750}}>
             <h1>How are you feeling?</h1>
             <form onSubmit={handleFeelingSubmit}>
                 <input
@@ -59,8 +62,9 @@ function FeelingForm() {
                     value="Next" 
                     style={{margin: 5}}
                 /> */}
-                <Button sx={{ml: 1, mr: 1}} variant="contained" type="submit">Next</Button>
+                <Button sx={{ml: 1, mr: 1}} variant="contained" type="submit" className="button-container">Next</Button>
             </form>
+        </Paper>
         </>
     )
 }

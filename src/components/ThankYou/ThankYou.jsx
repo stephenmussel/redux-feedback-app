@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import Paper from '@mui/material/Paper';
+
 
 function ThankYou() {
 
@@ -23,8 +25,12 @@ function ThankYou() {
 
     return(
         <>
+        <Paper variant="elevation" className="feedback-container" sx={{width: 750}}>
             <h1>Thank you!</h1>
-            <Button variant="contained" onClick={handleNewFeedback}>Leave new feedback!</Button>
+            <div>
+                <Button variant="contained" onClick={handleNewFeedback}>Leave new feedback!</Button>
+            </div>
+        </Paper>
         </>        
     )
 }
