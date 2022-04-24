@@ -21,7 +21,7 @@ function ReviewFeedback() {
             data: feedback
         }).then(response => {
             console.log('feedback: ', feedback);
-            history.pushState('/thankyou');
+            history.push('/thankyou');
         })
     }
 
