@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function CommentsForm() {
@@ -7,6 +7,16 @@ function CommentsForm() {
     const [comments, setComments] = useState('');
     const dispatch = useDispatch();
     const history = useHistory();
+    const feedback = useSelector(store => store.feedbackReducer);
+
+    useEffect(() => {
+        console.log('in comments useEffect');
+        entryCheck();
+    }, []);
+
+    const entryCheck = () => {
+        feedback.comments && setComments(feedback.comments)
+    }
 
     const feedbackObject = {
         comments: comments,
