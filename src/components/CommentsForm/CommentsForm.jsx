@@ -29,6 +29,13 @@ function CommentsForm() {
         history.push('/review');
     }
 
+    const goBack = (event) => {
+        event.preventDefault();
+        const action = {type: 'ADD_COMMENTS', payload: feedbackObject};
+        dispatch(action);
+        history.push('/support')
+    }
+
     return(
         <>
             <h1>Any comments you want to leave?</h1>
@@ -44,6 +51,7 @@ function CommentsForm() {
                     value="Next"
                     style={{margin: 5}}
                 />
+                <button onClick={goBack}>Back</button>
             </form>
         </>
     )
