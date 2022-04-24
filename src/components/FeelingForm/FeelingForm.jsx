@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function FeelingForm() {
@@ -7,6 +7,16 @@ function FeelingForm() {
     const [feeling, setFeeling] = useState('');
     const dispatch = useDispatch();
     const history = useHistory();
+    const feedback = useSelector(store => store.feedbackReducer);
+
+    useEffect(() => {
+        console.log('in feeling useEffect');
+        entryCheck();
+    }, [])
+
+    const entryCheck = () => {
+        feedback.feeling && setFeeling(feedback.feeling);
+    }
 
     const feedbackObject = {
         feeling: feeling,
