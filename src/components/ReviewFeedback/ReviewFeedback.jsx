@@ -23,10 +23,9 @@ function ReviewFeedback() {
         })
     }
 
-    const handleEdit = (event) => {
+    const goBack = (event) => {
         event.preventDefault();
-        console.log('in handleEdit');
-
+        history.push('/comments')
     }
 
     return(
@@ -38,7 +37,8 @@ function ReviewFeedback() {
             <p>Understanding: {feedback.understanding}</p>
             <p>Support: {feedback.support}</p>
             <p>Comments: {feedback.comments}</p>
-            <button onClick={handleReviewSubmit}>Submit</button>
+            <button onClick={handleReviewSubmit} style={{marginRight: 5}}>Submit</button>
+            <button onClick={goBack}>Back</button>
         </>
     )
 }
