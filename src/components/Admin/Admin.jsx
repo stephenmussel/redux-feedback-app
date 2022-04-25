@@ -31,7 +31,7 @@ function Admin() {
         if(confirm('Are you sure you want to delete this?')) {
             axios({
                 method: 'DELETE',
-                url: `feedback/${id}`,
+                url: `/feedback/${id}`,
             }).then(response => {
                 console.log('response: ', response);
                 fetchFeedback();
@@ -41,10 +41,19 @@ function Admin() {
         }      
     }
 
-    const flagFeedback = (event) => {
+    const flagFeedback = (id) => {
         console.log('flagged feedback');
 
-        
+        axios({
+            method: 'PUT',
+            url: `/feedback/${id}`,
+        }).then(response => {
+            console.log('flagged feedback', response);
+            fetchFeedback();
+        }).catch(error => {
+            console.log(error);
+            alert('error in flagging feedback');
+        });
     }
 
     return(
