@@ -41,6 +41,12 @@ function Admin() {
         }      
     }
 
+    const flagFeedback = (event) => {
+        console.log('flagged feedback');
+
+        
+    }
+
     return(
         
         <>
@@ -53,6 +59,7 @@ function Admin() {
                         <th>Understanding</th>
                         <th>Support</th>
                         <th>Comments</th>
+                        <th>Flagged</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
@@ -63,10 +70,17 @@ function Admin() {
                         <td>{each.understanding}</td>
                         <td>{each.support}</td>
                         <td>{each.comments}</td>
+                        <td>
+                            <input 
+                                type="checkbox"
+                                checked={each.flagged}
+                                value={each.id}
+                                onChange={(event) => flagFeedback(event)}
+                            ></input>
+                        </td>
                         <td><button onClick={() => deleteFeedback(each.id)}>Delete</button></td>
                     </tr>
-                    ))}
-                    
+                    ))}   
                 </tbody>
             </table>
         </>
