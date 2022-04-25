@@ -19,15 +19,18 @@ function Admin() {
             url: '/feedback',
         }).then(response => {
             console.log('response.data: ', response.data);
-            setResults(response.data)
+            setResults(response.data);
+            console.log('results: ', results);
         }).catch(error => {
             console.log('error in GET', error);
         })
     }
 
     return(
+        
         <>
             <h1>Admin</h1>
+            <p>{JSON.stringify(results)}</p>
         </>
     )
 }
