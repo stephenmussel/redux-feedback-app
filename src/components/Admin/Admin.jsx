@@ -5,7 +5,6 @@ import axios from 'axios';
 function Admin() {
 
     const [results, setResults] = useState([]);
-    const feedback = useSelector(store => store.feedbackReducer);
 
     useEffect(() => {
         console.log('in admin useEffect');

@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
     console.log('in feedback GET');
 
-    let queryText = `SELECT * FROM "feedback" ORDER BY "id";`;
+    let queryText = `SELECT * FROM "feedback" ORDER BY "date" DESC;`;
     pool.query(queryText)
         .then(result => {
             res.send(result.rows);
