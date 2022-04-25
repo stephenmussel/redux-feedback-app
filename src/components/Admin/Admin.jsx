@@ -26,16 +26,19 @@ function Admin() {
     }
 
     const deleteFeedback = (id) => {
-        console.log('clicked delete');
-        axios({
-            method: 'DELETE',
-            url: `feedback/${id}`,
-        }).then(response => {
-            console.log('response: ', response);
-            fetchFeedback();
-        }).catch(error => {
-            console.log('error in DELETE', error);
-        });
+        // console.log('clicked delete');
+        
+        if(confirm('Are you sure you want to delete this?')) {
+            axios({
+                method: 'DELETE',
+                url: `feedback/${id}`,
+            }).then(response => {
+                console.log('response: ', response);
+                fetchFeedback();
+            }).catch(error => {
+                console.log('error in DELETE', error);
+            });
+        }      
     }
 
     return(
