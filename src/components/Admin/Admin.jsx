@@ -29,7 +29,7 @@ function Admin() {
         console.log('clicked delete');
         axios({
             method: 'DELETE',
-            url: `/feedback/${id}`,
+            url: `feedback/${id}`,
         }).then(response => {
             console.log('response: ', response);
             fetchFeedback();
@@ -60,7 +60,7 @@ function Admin() {
                         <td>{each.understanding}</td>
                         <td>{each.support}</td>
                         <td>{each.comments}</td>
-                        <td><button onClick={deleteFeedback}>Delete</button></td>
+                        <td><button onClick={() => deleteFeedback(each.id)}>Delete</button></td>
                     </tr>
                     ))}
                     
