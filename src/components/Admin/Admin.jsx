@@ -25,6 +25,19 @@ function Admin() {
         })
     }
 
+    const deleteFeedback = (id) => {
+        console.log('clicked delete');
+        axios({
+            method: 'DELETE',
+            url: `/feedback/${id}`,
+        }).then(response => {
+            console.log('response: ', response);
+            fetchFeedback();
+        }).catch(error => {
+            console.log('error in DELETE', error);
+        });
+    }
+
     return(
         
         <>
@@ -47,7 +60,7 @@ function Admin() {
                         <td>{each.understanding}</td>
                         <td>{each.support}</td>
                         <td>{each.comments}</td>
-                        <td><button>Delete</button></td>
+                        <td><button onClick={deleteFeedback}>Delete</button></td>
                     </tr>
                     ))}
                     
