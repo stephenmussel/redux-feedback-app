@@ -9,6 +9,7 @@ import SupportForm from '../SupportForm/SupportForm';
 import CommentsForm from '../CommentsForm/CommentsForm';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
 import ThankYou from '../ThankYou/ThankYou';
+import Admin from '../Admin/Admin';
 
 import { HashRouter as Router, Route } from 'react-router-dom';
 
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/comments" component={CommentsForm}/>
         <Route exact path="/review" component={ReviewFeedback}/>
         <Route exact path="/thankyou" component={ThankYou}/>
+        <Route exact path="/admin" component={Admin}/>
       </Router>
      
     </div>
