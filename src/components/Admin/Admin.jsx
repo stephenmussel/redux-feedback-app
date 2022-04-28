@@ -15,11 +15,13 @@ function Admin() {
 
     const [results, setResults] = useState([]);
 
+    // retrieves all feedback on page load
     useEffect(() => {
         console.log('in admin useEffect');
         fetchFeedback();
     }, [])
 
+    // retrieves all feedback
     const fetchFeedback = () => {
         console.log('in fetchFeedback');
         axios({
@@ -37,10 +39,10 @@ function Admin() {
     const deleteFeedback = (id) => {
         // console.log('clicked delete');
         
-        if(confirm('Are you sure you want to delete this?')) {
+        if(confirm('Are you sure you want to delete this?')) { // prompts to confirm deletion
             axios({
                 method: 'DELETE',
-                url: `/feedback/${id}`,
+                url: `/feedback/${id}`, // captures ID of feedback to delete
             }).then(response => {
                 console.log('response: ', response);
                 fetchFeedback();
@@ -55,8 +57,8 @@ function Admin() {
 
         axios({
             method: 'PUT',
-            url: `/feedback/${event.target.value}`,
-            data: {flagged: event.target.checked},
+            url: `/feedback/${event.target.value}`, // captured ID of feedback flagged
+            data: {flagged: event.target.checked}, // updating feedback to flag
         }).then(response => {
             console.log('flagged feedback', response);
             fetchFeedback();
@@ -92,7 +94,6 @@ function Admin() {
                                 <TableCell>{each.support}</TableCell>
                                 <TableCell>{each.comments}</TableCell>
                                 <TableCell>
-                                    {/* FIX */}
                                     <Checkbox 
                                         checked={each.flagged}
                                         value={each.id}

@@ -3,7 +3,7 @@ const router = express.Router();
 const pg = require('pg');
 const pool = require('../modules/pool');
 
-// POST feedback
+// Add feedback
 router.post('/', (req, res) => {
     // console.log('in feedback POST: ', req.body);
     const feedbackToAdd = req.body;
@@ -61,8 +61,7 @@ router.delete('/:id', (req, res) => {
         });
 });
 
-// FIX
-// PUT feedback
+// Flag feedback
 router.put('/:id', (req, res) => {
     feedbackId = req.params.id;
     flaggedFeedback = req.body.flagged;
