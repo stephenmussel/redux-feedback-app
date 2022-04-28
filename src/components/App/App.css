@@ -29,3 +29,22 @@ h4 {
   flex-direction: column;
   justify-content: space-around; 
 }
+
+.textcheckbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .checkbox{
+  padding-left: 5px;
+} */
+
+.admin-table-container{
+  max-width: 90%;
+}
+
+.admin-container{
+  display: flex;
+  justify-content: center;
+}
