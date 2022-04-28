@@ -9,7 +9,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
-
+import Button from '@mui/material/Button';
 
 function Admin() {
 
@@ -100,7 +100,7 @@ function Admin() {
                                         onChange={(event) => flagFeedback(event)}
                                     ></Checkbox>
                                 </TableCell>
-                                <TableCell><button onClick={() => deleteFeedback(each.id)}>Delete</button></TableCell>
+                                <TableCell><Button variant="contained" onClick={() => deleteFeedback(each.id)}>Delete</Button></TableCell>
                             </TableRow>
                             ))}   
                         </TableBody>
