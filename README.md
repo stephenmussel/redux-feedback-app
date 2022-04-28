@@ -41,8 +41,7 @@ Your project description goes here. What problem did you solve? How did you solv
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+<br />
 
 * [React.js](https://reactjs.org/)
 * [Redux](http://redux.js.org)
@@ -65,13 +64,25 @@ This is an example of how you may give instructions on setting up your project l
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+- [Node.js](http://node.js.org/en)
+- [PostgreSQL](http://postgresql.org)
 
 ### Installation
+
+Create your database and tables using the provided `data.sql` file. Start the server.
+
+```
+npm install
+npm run server
+```
+
+Now that the server is running, open a new terminal with with `cmd + t` and start your react app.
+
+```
+npm run client
+```
+
+`localhost:3000` should automatically open up in your browser. If it doesn't, open up a new tab and type `localhost:3000`
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
