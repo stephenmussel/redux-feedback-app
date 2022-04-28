@@ -50,12 +50,13 @@ function Admin() {
         }      
     }
 
-    const flagFeedback = (id) => {
+    const flagFeedback = (event) => {
         console.log('flagged feedback');
 
         axios({
             method: 'PUT',
-            url: `/feedback/${id}`,
+            url: `/feedback/${event.target.value}`,
+            data: {flagged: event.target.checked},
         }).then(response => {
             console.log('flagged feedback', response);
             fetchFeedback();
@@ -85,15 +86,13 @@ function Admin() {
                         </TableHead>
                         <TableBody>
                             {results.map(each => (
-                            <TableRow 
-                                key={each.id}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0}} }
-                            >
+                            <TableRow key={each.id}>
                                 <TableCell>{each.feeling}</TableCell>
                                 <TableCell>{each.understanding}</TableCell>
                                 <TableCell>{each.support}</TableCell>
                                 <TableCell>{each.comments}</TableCell>
                                 <TableCell>
+                                    {/* FIX */}
                                     <Checkbox 
                                         checked={each.flagged}
                                         value={each.id}
