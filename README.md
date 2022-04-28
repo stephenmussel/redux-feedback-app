@@ -1,4 +1,4 @@
-# Feedback App
+# Redux Feedback App
 
 
 
@@ -45,9 +45,14 @@ Your project description goes here. What problem did you solve? How did you solv
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [React.js](https://reactjs.org/)
+* [Redux](http://redux.js.org)
+* [Axios](http://npmjs.com/package/axios)
+* [Material-UI](https://mui.com/)
+* HTML5
+* CSS3
+* [Express.js](http://expressjs.com)
 * [Node.js](https://nodejs.org/en)
 * [PostgreSQL](https://postgresgl.org)
-* [Material UI](https://mui.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 <br />
@@ -98,11 +103,10 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 
 <!-- CONTACT -->
-## Contact
+## Contact  
 
-Phaydara Vongsavanthong - stephen.mussel@gmail.com
-
-Project Link: [Feedback App](https://github.com/stephenmussel/redux-feedback-loop-MUI)
+[LinkedIn](https://www.linkedin.com/in/phaydara-vongsavanthong/)  
+[GitHub](https://github.com/stephenmussel)  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -114,6 +118,9 @@ Project Link: [Feedback App](https://github.com/stephenmussel/redux-feedback-loo
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [Google](http://www.google.com)
+* [Markdown](https://www.markdownguide.org/basic-syntax/)
+* [Material-UI](https://mui.com/)
+* [MDN](https://developer.mozilla.org/en-US/)
 
 <!-- 
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
