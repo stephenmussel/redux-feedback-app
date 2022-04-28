@@ -63,42 +63,41 @@ Your project description goes here. What problem did you solve? How did you solv
 This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+<br />
 
 - [Node.js](http://node.js.org/en)
 - [PostgreSQL](http://postgresql.org)
 
 ### Installation
+<br />
 
-Create your database and tables using the provided `data.sql` file. Start the server.
+Clone the repo:
+  ```
+  git clone git@github.com:stephenmussel/redux-feedback-app.git
+  ```
 
-```
-npm install
-npm run server
-```
+Create your database in PostgreSQL and tables using the provided `data.sql` file. Start the server.
 
-Now that the server is running, open a new terminal with with `cmd + t` and start your react app.
+Install dependencies:
+
+  ```
+  npm install
+  ```
+
+Start server (port: 5000):
+
+  ```
+  npm run server
+  ```
+
+Now that the server is running, open a new terminal with with `cmd + t` and start your react app (port: 3000).
 
 ```
 npm run client
 ```
 
-`localhost:3000` should automatically open up in your browser. If it doesn't, open up a new tab and type `localhost:3000`
+`localhost:3000` should automatically open up in your browser. If it doesn't, open up a new tab and type `localhost:3000` 
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 <br />
@@ -108,6 +107,19 @@ _Below is an example of how you can instruct your audience on installing and set
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+1. The first page will ask: `How you are doing?`. Enter a number between 1 and 5. Numbers outside of this range will prompt you to edit your answer. You can not leave this empty and will be asked to provide an answer.  
+
+2. The next two pages (`understanding? support?`) have the same parameters.  
+
+3. The fourth page: `Any comments to leave?` is not required and you can move to the next without providing an answer.
+
+4. At this point you've noticed that you can go `Back` and edit your previous answers. When you do, your previous answers will be displayed for convenience.
+
+5. After the `Comments` page, you can `Review` your answers and make any last minute changes.
+  
+6. After you submit your feedback, you are directed to a `Thank you!` page and have another chance to provide new feedback.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 <br />
