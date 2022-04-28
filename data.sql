@@ -1,5 +1,5 @@
 -- Database should be prime_feedback_practice
-CREATE DATABASE "prime_feedback_practice";
+CREATE DATABASE "redux_feedback_app";
 
 -- Switch to "prime_feedback_practice" before making:
 -- Table to store the feedback
@@ -20,4 +20,4 @@ VALUES
   (5, 4, 3, 'AOK'),
   (1, 2, 3, 'Meh'),
   (3, 4, 3, 'Good'),
-  (4, 4, 4, 'Not sure?'),;
+  (4, 4, 4, 'Not sure?');
