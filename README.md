@@ -33,8 +33,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About
+<br />
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Test](/public/images/test.gif)
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
@@ -105,20 +106,28 @@ npm run client
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+<br />
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. The first page will ask: `How you are feeling?`. Enter a number between 1 and 5. Numbers outside of this range will prompt you to edit your answer. You can not leave this empty and will be asked to provide an answer.  
 
-1. The first page will ask: `How you are doing?`. Enter a number between 1 and 5. Numbers outside of this range will prompt you to edit your answer. You can not leave this empty and will be asked to provide an answer.  
+![Page 1](/public/images/pageOne.jpg)  
 
 2. The next two pages (`understanding? support?`) have the same parameters.  
 
+![Page 2](/public/images/pageTwo.jpg)
+
 3. The fourth page: `Any comments to leave?` is not required and you can move to the next without providing an answer.
 
-4. At this point you've noticed that you can go `Back` and edit your previous answers. When you do, your previous answers will be displayed for convenience.
+4. At this point you've noticed that you can go `Back` and edit your previous answers. Your previous answers will be displayed for convenience.
 
 5. After the `Comments` page, you can `Review` your answers and make any last minute changes.
-  
+
+![Page 5](/public/images/pageFive.jpg)
+
 6. After you submit your feedback, you are directed to a `Thank you!` page and have another chance to provide new feedback.
+
+![Page 6](/public/images/pageSix.jpg)
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
