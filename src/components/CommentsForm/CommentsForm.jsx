@@ -64,8 +64,8 @@ function CommentsForm() {
                     value="Next"
                     style={{margin: 5}}
                 /> */}
+                <Button variant="contained" onClick={goBack} color="secondary">Back</Button>
                 <Button sx={{ml: 1, mr: 1}} variant="contained" type="submit">Next</Button>
-                <Button variant="contained" onClick={goBack}>Back</Button>
             </form>
         </Paper>
         </>

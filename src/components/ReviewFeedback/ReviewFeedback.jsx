@@ -41,8 +41,8 @@ function ReviewFeedback() {
             <p>Support: {feedback.support}</p>
             <p>Comments: {feedback.comments}</p>
             <div>
-                <Button sx={{ml: 1, mr: 1}} variant="contained" onClick={handleReviewSubmit}>Submit</Button>
-                <Button variant="contained" onClick={goBack}>Back</Button>
+                <Button variant="contained" onClick={goBack} color="secondary">Back</Button>
+                <Button sx={{ml: 1, mr: 1}} variant="contained" onClick={handleReviewSubmit} color="success">Submit</Button>
             </div>
         </Paper>
         </>
