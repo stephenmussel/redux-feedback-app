@@ -59,11 +59,6 @@ function CommentsForm() {
                     onChange={event => setComments(event.target.value)}
                     value={comments}
                  /><br /><br />
-                {/* <input 
-                    type="submit"
-                    value="Next"
-                    style={{margin: 5}}
-                /> */}
                 <Button variant="contained" onClick={goBack} color="secondary">Back</Button>
                 <Button sx={{ml: 1, mr: 1}} variant="contained" type="submit">Next</Button>
             </form>

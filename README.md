@@ -1,9 +1,3 @@
-## Checklist
-
-- [ ] admin gif
-- [ ] update input validation
-
-
 # Redux Feedback App
 
 
@@ -41,9 +35,10 @@
 ## About
 <br />
 
-Add story. What problem did you solve? How did you solve it?
 
-A single-page application that takes feedback and stores user inputs in Redux. You can review your answers and go back to make changes before submitting. An admin page is included that allows you to view all submissions with the ability to flag and delete each individual user feedback.
+Instructors wanted to make sure their students were receiving the best education. They needed a simple way to collect and view student feedback. This information would allow them to adjust their teaching and content accordingly.
+
+I created a single-page application that takes feedback and stores user responses in Redux. Users can review their responses and edit them  before submitting. The admin page allows the instructor to view all submissions. They also have the ability to flag and delete each individual user feedback.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -112,7 +107,8 @@ A tab should automatically open up in your browser. Otherwise, open up a new bro
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-<br />
+<br />  
+
 
 ![Preview Gif](/public/images/redux-feedback-app.gif)
 <br />
@@ -176,7 +172,7 @@ Additionally, and `Admin` page is provided. It displays all the feedback submitt
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Thanks to [Prime Digital Academy](http://primeacademy.io) and my wife and our do Laurel for their continued support and patience as I created this app.
 
 * [Google](http://www.google.com)
 * [Markdown](https://www.markdownguide.org/basic-syntax/)
