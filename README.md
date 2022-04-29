@@ -1,3 +1,14 @@
+## Checklist
+
+- [x] screenshot pageThree
+- [x] screenshot pageFour
+- [x] screenshot pageAdmin
+- [ ] admin gif
+- [ ] update input validation
+- [ ] order admin when flagged by desc?
+
+
+
 # Redux Feedback App
 
 
@@ -111,31 +122,47 @@ npm run client
 ![Preview Gif](/public/images/redux-feedback-app.gif)
 <br />
 
-1. The first page will ask: `How you are feeling?`. Enter a number between 1 and 5. A response outside of this range will prompt you to provide the correct response. If left empty, you will be asked to provide a response.  
+The first page asks: `How you are feeling?`. Enter a number between 1 and 5. A response outside of this range will prompt you to provide the correct response. If left empty, you will be asked to provide a response.  
+<br />  
 
-![Page 1](/public/images/pageOne.jpg)
+![Feeling](/public/images/pageOne.jpg)
 <br />
 
-2. The next two pages (`understanding? support?`) have the same parameters.  
+The next two pages have the same parameters. 
+<br /> 
 
-![Page 2](/public/images/pageTwo.jpg)
+![Understanding](/public/images/pageTwo.jpg)
+<br />  
+
+![Support](/public/images/pageThree.jpg)
 <br />
 
-3. The fourth page: `Any comments to leave?` does not require a response and you can move to the next without providing one.
-
-4. At this point you've noticed that you can go `Back` and edit your previous responses. Your previous responses will be displayed for convenience.
-
-5. After the `Comments` page, you can `Review` your responses and make any last minute changes.
-
-![Page 5](/public/images/pageFive.jpg)
+The fourth page does not require a response and you can continue without providing one.  
 <br />
 
-6. After you submit your feedback, you are directed to a `Thank you!` page and have another chance to provide new feedback.
-
-![Page 6](/public/images/pageSix.jpg)
+![Comments](/public/images/pageFour.jpg)
 <br />
 
+At this point you've noticed that you can go `Back` and edit your previous responses. Your previous responses will be displayed for convenience.
+<br />
 
+After the `Comments` page, you can `Review` your responses and make any last minute changes.
+<br />
+
+![Review](/public/images/pageFive.jpg)
+<br />
+
+After you submit your feedback, you are directed to a `Thank you!` page and have another chance to provide new feedback.  
+<br />
+
+![Thank you](/public/images/pageSix.jpg)
+<br />  
+
+Additionally, and `Admin` page is provided. It displays all the feedback submitted with the ability to delete and flag individual user feedback.  
+<br />
+
+![Thank you](/public/images/pageAdmin.jpg)
+<br /> 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 <br />
