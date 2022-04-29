@@ -35,7 +35,7 @@
 ## About
 <br />
 
-![Test](/public/images/test.gif)
+![Test](/public/images/redux-feedback-app.gif)
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
