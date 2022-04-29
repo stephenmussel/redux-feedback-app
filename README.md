@@ -1,11 +1,9 @@
 ## Checklist
 
-- [x] screenshot pageThree
-- [x] screenshot pageFour
-- [x] screenshot pageAdmin
 - [ ] admin gif
 - [ ] update input validation
 - [ ] order admin when flagged by desc?
+- [ ] screenshot pageAdmin after above done
 
 
 
@@ -108,7 +106,7 @@ Now that the server is running, open a new terminal with `cmd + t` and start you
 npm run client
 ```
 
-`localhost:3000` should automatically open up in your browser. Otherwise, open up a new browser tab and type `localhost:3000` 
+A tab should automatically open up in your browser. Otherwise, open up a new browser tab and type `localhost:3000` 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
