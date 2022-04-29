@@ -32,11 +32,15 @@ function FeelingForm() {
         console.log('feeling: ', feeling);
         console.log('feedbackObject: ', feedbackObject);
 
-        const action = {type: 'ADD_FEELING', payload: feedbackObject}
-        dispatch(action);
-        setFeeling('');
-        nextUnderstanding();
-    }
+        if(feeling === "" || feeling < 1 || feeling > 5) {
+            alert('Please enter a number between 1 and 5.')
+        } else {
+            const action = {type: 'ADD_FEELING', payload: feedbackObject}
+            dispatch(action);
+            setFeeling('');
+            nextUnderstanding();
+        };
+    };
 
     const nextUnderstanding = () => {
         history.push('/understanding');
@@ -48,20 +52,12 @@ function FeelingForm() {
             <h1>How are you feeling?</h1>
             <form onSubmit={handleFeelingSubmit}>
                 <input
-                    required
                     type="number"
-                    min="1"
-                    max="5"
                     style={{width: 50}}
                     placeholder="1-5"
                     onChange={event => setFeeling(event.target.value)}
                     value={feeling}
                 />
-                {/* <input 
-                    type="submit" 
-                    value="Next" 
-                    style={{margin: 5}}
-                /> */}
                 <Button sx={{ml: 1, mr: 1}} variant="contained" type="submit" className="button-container">Next</Button>
             </form>
         </Paper>

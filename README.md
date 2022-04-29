@@ -2,8 +2,6 @@
 
 - [ ] admin gif
 - [ ] update input validation
-- [ ] screenshot pageAdmin after above done
-
 
 
 # Redux Feedback App
