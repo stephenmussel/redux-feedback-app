@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import axios from 'axios';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -75,9 +74,10 @@ function Admin() {
             {/* <p>{JSON.stringify(results)}</p> */}
             <div className="admin-container">
                 <TableContainer className="admin-table-container" component={Paper}>
-                    <Table sx={{ midWidth: 650 }} aria-label="feedback-table">
+                    <Table sx={{ midWidth: 750 }} aria-label="feedback-table">
                         <TableHead>
                             <TableRow>
+                                <TableCell>Date</TableCell>
                                 <TableCell>Feeling</TableCell>
                                 <TableCell>Understanding</TableCell>
                                 <TableCell>Support</TableCell>
@@ -89,6 +89,7 @@ function Admin() {
                         <TableBody>
                             {results.map(each => (
                             <TableRow key={each.id}>
+                                <TableCell>{each.date.substr(0, 10)}</TableCell>
                                 <TableCell>{each.feeling}</TableCell>
                                 <TableCell>{each.understanding}</TableCell>
                                 <TableCell>{each.support}</TableCell>

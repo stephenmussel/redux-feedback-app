@@ -66,7 +66,7 @@ router.put('/:id', (req, res) => {
     feedbackId = req.params.id;
     flaggedFeedback = req.body.flagged;
     console.log('this is id to flag: ', feedbackId);
-    let queryText = `UPDATE "feedback" SET "flagged" = $1 WHERE "id" = $2 `;
+    let queryText = `UPDATE "feedback" SET "flagged" = $1 WHERE "id" = $2;`;
     pool.query(queryText, [flaggedFeedback, feedbackId])
         .then(result => {
             res.sendStatus(200);
