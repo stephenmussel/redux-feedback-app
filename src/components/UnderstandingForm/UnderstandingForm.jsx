@@ -31,11 +31,15 @@ function UnderstandingForm() {
         console.log('understanding: ', understanding);
         console.log('feedbackObject: ', feedbackObject);
 
-        const action = {type: 'ADD_UNDERSTANDING', payload: feedbackObject}
-        dispatch(action);
-        setUnderstanding('');
-        nextSupported();   
-    }
+        if(understanding === "" || understanding < 1 || understanding > 5) {
+            alert('Please enter a number between 1 and 5.')
+        } else {
+            const action = {type: 'ADD_UNDERSTANDING', payload: feedbackObject}
+            dispatch(action);
+            setUnderstanding('');
+            nextSupported();   
+        };  
+    };
 
     const nextSupported = () => {
         history.push('/support');
@@ -54,20 +58,12 @@ function UnderstandingForm() {
             <h1>How well are you understanding the content?</h1>
             <form onSubmit={handleUnderstandSubmit}>
                 <input
-                    required
                     type="number"
-                    min="1"
-                    max="5"
                     style={{width: 50}}
                     placeholder="1-5"
                     onChange={event => setUnderstanding(event.target.value)}
                     value={understanding}
                 />
-                {/* <input
-                    type="submit"
-                    value="Next"
-                    style={{margin: 5}}
-                /> */}
                 <Button sx={{ml: 1, mr: 1}} variant="contained" onClick={goBack} color="secondary">Back</Button>
                 <Button variant="contained" type="submit">Next</Button>
             </form>
