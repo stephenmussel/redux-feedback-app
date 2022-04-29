@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 
 function FeelingForm() {
@@ -27,9 +26,10 @@ function FeelingForm() {
     }
 
     const handleFeelingSubmit = (event) => {
+        event.preventDefault();
+        
         console.log('in handleFeelingSubmit');
         console.log('feeling: ', feeling);
-        event.preventDefault();
         console.log('feedbackObject: ', feedbackObject);
 
         const action = {type: 'ADD_FEELING', payload: feedbackObject}

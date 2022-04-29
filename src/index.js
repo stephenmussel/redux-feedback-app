@@ -18,7 +18,6 @@ const feedbackObject = {
     comments: '',
 }
 
-// TODO add more reducers?
 // TODO switch statement?
 const feedbackReducer = (state = feedbackObject, action) => {
     console.log('in feedbackReducer', action);

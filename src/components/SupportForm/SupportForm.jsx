@@ -14,7 +14,7 @@ function SupportForm() {
     useEffect(() => {
         console.log('in support useEffect');
         entryCheck();
-    }), [];
+    }, []);
 
     const entryCheck = () => {
         feedback.support && setSupport(feedback.support);
