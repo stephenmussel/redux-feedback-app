@@ -134,7 +134,7 @@ The fourth page does not require a response and you can continue without providi
 ![Comments](/public/images/pageFour.jpg)
 <br />
 
-At this point you've noticed that you can go `Back` and edit your previous responses. Your previous responses will be displayed for convenience.
+At this point you've noticed that you can go `Back` and edit your previous responses. Previous responses will be displayed for your convenience.
 <br />
 
 After the `Comments` page, you can `Review` your responses and make any last minute changes.
@@ -149,7 +149,7 @@ After you submit your feedback, you are directed to a `Thank you!` page and have
 ![Thank you](/public/images/pageSix.jpg)
 <br />  
 
-Additionally, and `Admin` page is provided. It displays all the feedback submitted with the ability to delete and flag individual user feedback.  
+Additionally, an `Admin` page is provided. It displays all the feedback with the ability to delete and flag individual user feedback.  
 <br />
 
 ![Thank you](/public/images/pageAdmin.jpg)
@@ -172,7 +172,7 @@ Additionally, and `Admin` page is provided. It displays all the feedback submitt
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Thanks to [Prime Digital Academy](http://primeacademy.io) and my wife and our do Laurel for their continued support and patience as I created this app.
+Thanks to [Prime Digital Academy](http://primeacademy.io) and my wife and our dog Laurel for their continued support and patience as I created this app.
 
 * [Google](http://www.google.com)
 * [Markdown](https://www.markdownguide.org/basic-syntax/)
