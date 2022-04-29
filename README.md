@@ -152,7 +152,7 @@ After you submit your feedback, you are directed to a `Thank you!` page and have
 Additionally, an `Admin` page is provided. It displays all the feedback with the ability to delete and flag individual user feedback.  
 <br />
 
-![Thank you](/public/images/pageAdmin.jpg)
+![Thank you](/public/images/admin-preview.gif)
 <br /> 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
