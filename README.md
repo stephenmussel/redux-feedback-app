@@ -35,9 +35,9 @@
 ## About
 <br />
 
-![Test](/public/images/redux-feedback-app.gif)
+Add story. What problem did you solve? How did you solve it?
 
-Your project description goes here. What problem did you solve? How did you solve it?
+A single-page application that takes feedback and stores user inputs in Redux. You can review your answers and go back to make changes before submitting. An admin page is included that allows you to view all submissions with the ability to flag and delete each individual user feedback.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -61,7 +61,7 @@ Your project description goes here. What problem did you solve? How did you solv
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
+Use the following instructions to set up a local version.
 
 ### Prerequisites
 <br />
@@ -77,7 +77,7 @@ Clone the repo:
   git clone git@github.com:stephenmussel/redux-feedback-app.git
   ```
 
-Create your database in PostgreSQL and tables using the provided `data.sql` file. Start the server.
+Create your database and tables in PostgreSQL using the provided `data.sql` file.
 
 Install dependencies:
 
@@ -85,19 +85,19 @@ Install dependencies:
   npm install
   ```
 
-Start server (port: 5000):
+Start server using `port: 5000`:
 
   ```
   npm run server
   ```
 
-Now that the server is running, open a new terminal with with `cmd + t` and start your react app (port: 3000).
+Now that the server is running, open a new terminal with `cmd + t` and start your app using `port: 3000`.
 
 ```
 npm run client
 ```
 
-`localhost:3000` should automatically open up in your browser. If it doesn't, open up a new tab and type `localhost:3000` 
+`localhost:3000` should automatically open up in your browser. Otherwise, open up a new browser tab and type `localhost:3000` 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -108,25 +108,32 @@ npm run client
 ## Usage
 <br />
 
-1. The first page will ask: `How you are feeling?`. Enter a number between 1 and 5. Numbers outside of this range will prompt you to edit your answer. You can not leave this empty and will be asked to provide an answer.  
+![Preview Gif](/public/images/redux-feedback-app.gif)
+<br />
 
-![Page 1](/public/images/pageOne.jpg)  
+1. The first page will ask: `How you are feeling?`. Enter a number between 1 and 5. A response outside of this range will prompt you to provide the correct response. If left empty, you will be asked to provide a response.  
+
+![Page 1](/public/images/pageOne.jpg)
+<br />
 
 2. The next two pages (`understanding? support?`) have the same parameters.  
 
 ![Page 2](/public/images/pageTwo.jpg)
+<br />
 
-3. The fourth page: `Any comments to leave?` is not required and you can move to the next without providing an answer.
+3. The fourth page: `Any comments to leave?` does not require a response and you can move to the next without providing one.
 
-4. At this point you've noticed that you can go `Back` and edit your previous answers. Your previous answers will be displayed for convenience.
+4. At this point you've noticed that you can go `Back` and edit your previous responses. Your previous responses will be displayed for convenience.
 
-5. After the `Comments` page, you can `Review` your answers and make any last minute changes.
+5. After the `Comments` page, you can `Review` your responses and make any last minute changes.
 
 ![Page 5](/public/images/pageFive.jpg)
+<br />
 
 6. After you submit your feedback, you are directed to a `Thank you!` page and have another chance to provide new feedback.
 
 ![Page 6](/public/images/pageSix.jpg)
+<br />
 
 
 
