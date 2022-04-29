@@ -2,7 +2,6 @@
 
 - [ ] admin gif
 - [ ] update input validation
-- [ ] order admin when flagged by desc?
 - [ ] screenshot pageAdmin after above done
 
 

@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
     console.log('in feedback GET');
 
-    let queryText = `SELECT * FROM "feedback" ORDER BY "date" DESC;`;
+    let queryText = `SELECT * FROM "feedback" ORDER BY "id" DESC;`;
     pool.query(queryText)
         .then(result => {
             res.send(result.rows);
@@ -66,7 +66,7 @@ router.put('/:id', (req, res) => {
     feedbackId = req.params.id;
     flaggedFeedback = req.body.flagged;
     console.log('this is id to flag: ', feedbackId);
-    let queryText = `UPDATE "feedback" SET "flagged" = $1 WHERE "id" = $2;`;
+    let queryText = `UPDATE "feedback" SET "flagged" = $1 WHERE "id" = $2 ORDER BY "flagged" DESC;`;
     pool.query(queryText, [flaggedFeedback, feedbackId])
         .then(result => {
             res.sendStatus(200);
